@@ -15,7 +15,7 @@ else
     src_dir=$(echo $directory | sed "s/[\"']//g")
 
     echo "压缩wav/mp3开始"
-    find "${src_dir}" \( -iname '*.wav' -or -iname '*.mp3' \) -exec lame {} +
+    find "${src_dir}" \( -iname '*.wav' -or -iname '*.mp3' \) -exec lame --verbose {} +
 
     echo "压缩wav/mp3完成"
 fi
